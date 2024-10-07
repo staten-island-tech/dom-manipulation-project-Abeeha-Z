@@ -44,7 +44,7 @@ const student = {
 const students = [{
         name: "Christina",
         age:15,
-        graduated: False,
+        graduated: false,
     }
     {
         name:"Eyad",
@@ -52,9 +52,9 @@ const students = [{
         graduated:true
     }
     {
-            name: "Christina",
-            age:15,
-            graduated: False,
+        name: "Christina",
+        age:15,
+        graduated: false
     }
 ]
 
