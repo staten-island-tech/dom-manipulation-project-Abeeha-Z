@@ -13,7 +13,7 @@ let student = {
     girlfriend:true
 };
 //dictionary for instances of student
-console.long(DOMSelectors.items)
+console.log(DOMSelectors.items)
 
 DomSelectors/GamepadButton.addEventListener("click", function(event) {
     console.long(event.target.parentElement)
