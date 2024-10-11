@@ -23,6 +23,8 @@ DomSelectors/GamepadButton.addEventListener("click", function(event) {
 
 });
 
+//pushing input to html
+
 DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
     console.log();
