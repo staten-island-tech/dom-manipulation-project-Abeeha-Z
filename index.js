@@ -8,13 +8,18 @@ const DOMSelectors = {
   Output: document.querySelector("#outputcontainer"),
   resetButton: document.querySelector("#reset"),
 };
-function backgroundAndText(background, text) {
-  background.style.backgroundColor = "pink";
-  text.innerHTML = "Tester";
-  text.
-}
+// function formStyling(page) {
+//   page.style.backgroundColor = "pink";
+//   page.textContent.fontsize = "110px";
+// }
 
-backgroundAndText(DOMSelectors.box, DOMSelectors.Output);
+// formStyling(DOMSelectors.box);
+
+// function cardStyling(moviecard) {
+//     moviecard.innerHTML.fontsize = "16px";
+// }
+
+// cardStyling(DOMSelectors.Output);
 
 function createObject() {
   const newCard = {
@@ -52,13 +57,14 @@ function removeObject() {
 }
 //Event listener to create movie card
 
-DOMSelectors.resetButton.addEventListener("click", function () {
-  removeObject();
-});
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
   createObject();
 });
+
+DOMSelectors.resetButton.addEventListener("click", function () {
+    removeObject();
+  });
 
 //create a reset button in the card to activate  removeObject
