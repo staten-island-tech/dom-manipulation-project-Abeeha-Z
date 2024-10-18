@@ -5,13 +5,11 @@ body {
     font-family: "Roboto Mono", monospace;
 
     #title {
-        color: white;
-        font-size: 4rem;
+        color: rgb(190, 11, 38);
+        font-size: 4.8rem;
         height: 20%;
         background-size: 100%;
         background-image: url(https://media.licdn.com/dms/image/v2/C561BAQHowLZFjFa2zQ/company-background_10000/company-background_10000/0/1585286813421/original_film_art___vintage_movie_posters_cover?e=2147483647&v=beta&t=ntGsXzFLejaWsZo-A43GjdidG7FbwwtDepQPYXLwVnE);
-
-
     }
 
     #container {
@@ -24,13 +22,23 @@ body {
         font-size: 1.5rem;
         box-shadow: 5px 5px 5px rgb(255, 222, 222);
         border-color: rgba(0, 0, 255, 0);
-        background-color: rgb(231, 10, 10);
+        background-color: rgb(190, 11, 38)
     }
 
     #submitBtn:hover {
         width: 9rem;
         height: 3rem;
         font-size: 2rem;
+    }
+
+    #coverimg {
+        width: 30%;
+    }
+
+    #outputcontainer {
+        width: 50%;
+        font-family: cursive;
+        background-color: red;
     }
 
 }

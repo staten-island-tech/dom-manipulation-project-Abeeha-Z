@@ -54,6 +54,8 @@ function removeObject() {
   if (lastCard) {
     DOMSelectors.Output.removeChild(lastCard);
   }
+  else 
+  {null}
 }
 //Event listener to create movie card
 

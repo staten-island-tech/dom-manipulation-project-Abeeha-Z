@@ -19,20 +19,20 @@
     <h1 id="title">Movie Card Generator</h1>
     <form class="form">
         <label for="moviename">Movie Name: </label><br>
-        <input type="text" id="moviename"><br>
+        <input type="text" id="moviename" required><br>
 
         <label for="movieactor">Actor: </label><br>
-        <input id="actor" type="text" id="movieactor"><br>
+        <input type="text" id="movieactor" required><br>
 
         <label for="coverimg">Insert Image Link: </label><br>
-        <input type="text" id="coverimg"><br>
+        <input type="text" id="coverimg" required><br>
 
         <input type="submit" id="submitBtn">
     </form>
 
-    <div class="outputcard" id="outputcontainer">
-        <button id="reset">Click to Reset</button>
+    <div id="outputcontainer">
     </div>
+    <button id="reset">Click to Reset</button>
 
     <script src="index.js"></script>
 </body>
