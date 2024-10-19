@@ -12,7 +12,7 @@ html, body {
 #title {
     position:static;
     margin: 0;
-    height: 20%; /* Set height to 20% of viewport height */
+    height: 22%; /* Set height to 20% of viewport height */
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -35,15 +35,19 @@ html, body {
     color:rgb(156, 13, 13);
 }
 
+#reset {
+    margin:2rem;
+}
+
 #outputcontainer {
     position:static;
-    width: 25%; 
-    height:70%;
+    background-size: cover; /* or use contain */
+    background-position: center; /* Center the image */
     display: none;
     flex-direction: column;
     color: white;
     text-shadow: 0.2rem 0.2rem 0.2rem black;
-    margin: 2rem 0;
+    padding:2rem;
     text-align: center;
     color:azure;
     border-radius: 1rem;

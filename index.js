@@ -24,7 +24,12 @@ function injectObject(newCard) {
   const Card = document.createElement("div");
   Card.classList.add("moviecard");
   Card.style.backgroundImage = `url(${newCard.image})`;
-  Card.style.backgroundSize = "cover";
+  Card.style.alignSelf = "center";
+  Card.style.Card.style.backgroundSize = "cover";
+  Card.style.backgroundPosition = "center";
+  Card.style.backgroundRepeat = "no-repeat"; // Prevent image repetition
+  Card.style.width = "75%"; // Ensure it takes full width
+  Card.style.height = "150%"; // Ensure it takes full height
 
   Card.innerHTML = `
   <h1>${newCard.name}</h1>
