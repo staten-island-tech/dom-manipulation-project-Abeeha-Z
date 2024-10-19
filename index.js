@@ -8,18 +8,6 @@ const DOMSelectors = {
   Output: document.querySelector("#outputcontainer"),
   resetButton: document.querySelector("#reset"),
 };
-// function formStyling(page) {
-//   page.style.backgroundColor = "pink";
-//   page.textContent.fontsize = "110px";
-// }
-
-// formStyling(DOMSelectors.box);
-
-// function cardStyling(moviecard) {
-//     moviecard.innerHTML.fontsize = "16px";
-// }
-
-// cardStyling(DOMSelectors.Output);
 
 function createObject() {
   const newCard = {
@@ -29,16 +17,18 @@ function createObject() {
   };
   injectObject(newCard);
   clearInputs();
+  DOMSelectors.Output.style.display = "block"; // Show output container
 }
 
 function injectObject(newCard) {
   const Card = document.createElement("div");
   Card.classList.add("moviecard");
+  Card.style.backgroundImage = `url(${newCard.image})`;
+  Card.style.backgroundSize = "cover";
 
   Card.innerHTML = `
-  <h3>${newCard.name}</h3>
-  <p>Starring: ${newCard.actor}</p>
-  <img src = "${newCard.image}"/>
+  <h1>${newCard.name}</h1>
+  <h3>Starring: ${newCard.actor}</h3>
   `;
   DOMSelectors.Output.appendChild(Card);
 }
@@ -54,11 +44,9 @@ function removeObject() {
   if (lastCard) {
     DOMSelectors.Output.removeChild(lastCard);
   }
-  else 
-  {null}
+  DOMSelectors.Output.style.display = "none";
 }
 //Event listener to create movie card
-
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -66,7 +54,7 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 });
 
 DOMSelectors.resetButton.addEventListener("click", function () {
-    removeObject();
-  });
+  removeObject();
+});
 
 //create a reset button in the card to activate  removeObject

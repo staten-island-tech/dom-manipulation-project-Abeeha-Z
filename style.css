@@ -1,44 +1,53 @@
-html,
-body {
+html, body {
     font-size: 10px;
-    text-align: center;
     font-family: "Roboto Mono", monospace;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+}
 
-    #title {
-        color: rgb(190, 11, 38);
-        font-size: 4.8rem;
-        height: 20%;
-        background-size: 100%;
-        background-image: url(https://media.licdn.com/dms/image/v2/C561BAQHowLZFjFa2zQ/company-background_10000/company-background_10000/0/1585286813421/original_film_art___vintage_movie_posters_cover?e=2147483647&v=beta&t=ntGsXzFLejaWsZo-A43GjdidG7FbwwtDepQPYXLwVnE);
-    }
+#title {
+    position:static;
+    margin: 0;
+    height: 20%; /* Set height to 20% of viewport height */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center text vertically */
+    font-size: 10rem;
+    background-image: url(https://media.licdn.com/dms/image/v2/C561BAQHowLZFjFa2zQ/company-background_10000/company-background_10000/0/1585286813421/original_film_art___vintage_movie_posters_cover?e=2147483647&v=beta&t=ntGsXzFLejaWsZo-A43GjdidG7FbwwtDepQPYXLwVnE);
+    color: rgb(190, 11, 38);
+    text-shadow: 0.3rem 0.3rem 0.3rem black;
+}
 
-    #container {
-        font-size: 1.5rem;
+.form {
+    position:static;
+    width: 30%; 
+    margin: 1rem 0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    font-size:2rem;
+    font-weight: 600;
+    color:rgb(156, 13, 13);
+}
 
-    }
-
-    #submitBtn {
-        margin: 1rem;
-        font-size: 1.5rem;
-        box-shadow: 5px 5px 5px rgb(255, 222, 222);
-        border-color: rgba(0, 0, 255, 0);
-        background-color: rgb(190, 11, 38)
-    }
-
-    #submitBtn:hover {
-        width: 9rem;
-        height: 3rem;
-        font-size: 2rem;
-    }
-
-    #coverimg {
-        width: 30%;
-    }
-
-    #outputcontainer {
-        width: 50%;
-        font-family: cursive;
-        background-color: red;
-    }
+#outputcontainer {
+    position:static;
+    width: 25%; 
+    height:70%;
+    display: none;
+    flex-direction: column;
+    color: white;
+    text-shadow: 0.2rem 0.2rem 0.2rem black;
+    margin: 2rem 0;
+    text-align: center;
+    color:azure;
+    border-radius: 1rem;
+    font-size:2rem;
+    font-family: "Roboto Mono", monospace;
 
 }
