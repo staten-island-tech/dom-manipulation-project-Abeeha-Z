@@ -48,7 +48,7 @@ html, body {
 }
 
 #reset {
-    margin:2rem;
+    margin-bottom:2rem;
     width:15%;
     align-self: center;
     box-shadow: 0.3rem 0.3rem 0.5rem black;
