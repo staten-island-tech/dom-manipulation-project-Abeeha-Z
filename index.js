@@ -15,9 +15,9 @@ function createObject() {
     actor: DOMSelectors.Inputactor.value,
     image: DOMSelectors.Inputimage.value,
   };
+  DOMSelectors.Output.style.display = "block"; // Show output container
   injectObject(newCard);
   clearInputs();
-  DOMSelectors.Output.style.display = "block"; // Show output container
 }
 
 function injectObject(newCard) {
@@ -25,11 +25,11 @@ function injectObject(newCard) {
   Card.classList.add("moviecard");
   Card.style.backgroundImage = `url(${newCard.image})`;
   Card.style.alignSelf = "center";
-  Card.style.Card.style.backgroundSize = "cover";
+  Card.style.backgroundSize = "cover";
   Card.style.backgroundPosition = "center";
   Card.style.backgroundRepeat = "no-repeat"; // Prevent image repetition
-  Card.style.width = "75%"; // Ensure it takes full width
-  Card.style.height = "150%"; // Ensure it takes full height
+  Card.style.width = "100%";
+  Card.style.height = "100%";
 
   Card.innerHTML = `
   <h1>${newCard.name}</h1>
@@ -45,12 +45,15 @@ function clearInputs() {
 }
 
 function removeObject() {
-  const lastCard = DOMSelectors.Output.lastChild;
-  if (lastCard) {
-    DOMSelectors.Output.removeChild(lastCard);
+  while (DOMSelectors.Output.firstChild) {
+    // While there's a first child
+    DOMSelectors.Output.removeChild(DOMSelectors.Output.firstChild); // Remove it
   }
-  DOMSelectors.Output.style.display = "none";
+  DOMSelectors.Output.style.display = "none"; // Hide the output container
 }
+
+DOMSelectors.Output.style.display = "none";
+
 //Event listener to create movie card
 
 DOMSelectors.form.addEventListener("submit", function (event) {

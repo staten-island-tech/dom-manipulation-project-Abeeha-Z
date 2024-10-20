@@ -2,7 +2,7 @@ html, body {
     font-size: 10px;
     font-family: "Roboto Mono", monospace;
     position: relative;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@ html, body {
     margin: 0;
     height: 22%; /* Set height to 20% of viewport height */
     width: 100vw;
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center; /* Center text vertically */
     font-size: 10rem;
@@ -35,23 +35,44 @@ html, body {
     color:rgb(156, 13, 13);
 }
 
+#submitBtn {
+    margin:1rem;
+    width:40%;
+    align-self: center;
+    box-shadow: 0.3rem 0.3rem 0.5rem black;
+    background-color:rgb(156, 13, 13);
+    font-family: "Roboto Mono", monospace;
+    color:white;
+    font-size:2rem;
+    padding:1rem;
+}
+
 #reset {
     margin:2rem;
+    width:15%;
+    align-self: center;
+    box-shadow: 0.3rem 0.3rem 0.5rem black;
+    background-color:rgb(156, 13, 13);
+    font-family: "Roboto Mono", monospace;
+    color:white;
+    font-size:2rem;
+    padding:1rem;
 }
 
 #outputcontainer {
+    display: none;  /*hide the container initially*/
+    width:60rem;
+    height:80rem;
     position:static;
-    background-size: cover; /* or use contain */
-    background-position: center; /* Center the image */
-    display: none;
+    background-size: cover; 
+    background-position: center; 
     flex-direction: column;
     color: white;
-    text-shadow: 0.2rem 0.2rem 0.2rem black;
+    text-shadow: 0.2rem 0.2rem 0.2rem rgb(8, 0, 0);
     padding:2rem;
     text-align: center;
     color:azure;
-    border-radius: 1rem;
     font-size:2rem;
     font-family: "Roboto Mono", monospace;
-
+    margin-bottom:4rem;
 }
